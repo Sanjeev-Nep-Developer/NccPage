@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Photo Gallery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-3 my-sm-5">
+      <h1 class="mb-sm-4 text-center">Gallery Title</h1>
+      <!-- Your existing content -->
+
+      <div class="row" id="imageGallery">
+        <!-- Dynamic content will be added here using JavaScript -->
+      </div>
+
+      <!-- Your existing pagination and other content -->
+
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // JavaScript code to dynamically generate image elements
+
+      // Sample array of image URLs (replace this with actual image URLs)
+      const imageUrls = [
+        './assets/img/avatar-1.png',
+        './assets/img/avatar-2.png',
+        './assets/img/avatar-3.png',
+        './assets/img/avatar-4.png',
+        './assets/img/avatar-5.png',
+        './assets/img/p1.jpg',
+        './assets/img/p2.jpg',
+        // Add more image URLs as needed
+      ];
+
+      // Reference to the container div
+      const imageGallery = document.getElementById('imageGallery');
+
+      // Iterate through the image URLs and create HTML elements
+      imageUrls.forEach((imageUrl, index) => {
+        // Create a column div
+        const columnDiv = document.createElement('div');
+        columnDiv.className = 'col-12 col-md-6 col-lg-4';
+
+        // Create a figure element
+        const figure = document.createElement('figure');
+        figure.className = 'figure';
+
+        // Create an anchor element with the image
+        const anchor = document.createElement('a');
+        anchor.href = ''; // Add your link here if needed
+        figure.appendChild(anchor);
+
+        // Create an image element
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.className = 'figure-img img-fluid img-thumbnail';
+        img.alt = 'Figure image';
+        img.style = 'height:"300px"';
+
+        anchor.appendChild(img);
+
+        // Create a figcaption element
+        const figcaption = document.createElement('figcaption');
+        figcaption.className = 'figure-caption text-center';
+
+        // Create a heading element
+        const heading = document.createElement('h6');
+        heading.textContent = `Figure ${index + 1}`;
+
+        // Create a paragraph element
+        const paragraph = document.createElement('p');
+        paragraph.textContent =
+          'Integer at varius massa, at aliquam velit. Suspendisse eu pellentesque libero, vel suscipit felis';
+
+        // Append elements to the figcaption
+        figcaption.appendChild(heading);
+        figcaption.appendChild(paragraph);
+
+        // Append the figcaption to the figure
+        figure.appendChild(figcaption);
+
+        // Append the figure to the column div
+        columnDiv.appendChild(figure);
+
+        // Append the column div to the imageGallery
+        imageGallery.appendChild(columnDiv);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "39 Ncc info page",
+			"path": "../.."
+		},
+		{
+			"name": "assets",
+			"path": "../../../responsive-card-slider-main/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "39 Ncc info page"
+	}
+}
