@@ -385,9 +385,10 @@ img:hover {
   height: auto;
 }
 .course .heading{
-  height: 45vh;
-  padding: 30px 10px 10px 20px;
-  /* background-color: red; */
+
+  height: 25vh;
+  padding: 10px;
+  background-color: red;
   
 }
 .course .heading h3{
@@ -399,7 +400,7 @@ img:hover {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 1%;
 }
 
 a {
@@ -419,7 +420,7 @@ img {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: 10px;
+  margin-top: 2rem;
 }
 
 .card__container {
@@ -566,7 +567,15 @@ img {
   }
 }
 
-/* Teachers part  */
+@media all and (max-width:400px) {
+  .course .heading h3{
+    font-size: 18px;
+  }
+}
+
+
+
+/*! Teachers part  */
 .teachers{
   height: 100vh;
 
@@ -585,20 +594,8 @@ img {
   text-align: center;
 }
 
-/* Photo gallery */
 
 
-.photo-gallery{
-  width: 100%;
-  height: 100vh;
-}
-
-
-/* video gallery */
-.video-gallery{
-  width: auto;
-  height: auto;
-}
 
 
 
@@ -652,7 +649,7 @@ img {
 @media all and (max-width:429px) {
   .home {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -668,7 +665,7 @@ img {
 
   .content {
     width: 100%;
-    height: 49vh;
+    height: 59vh;
   }
 
   .content p {
@@ -685,9 +682,19 @@ img {
 
 }
 
-@media all and (max-width:244px) {
+@media all and (max-width:323px) {
+  #lg{
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width:290px) {
+  .home{
+    height: auto;
+  }
   .content {
-    height: 60vh;
+    margin-top: 3rem;
+    height: 74vh;
   }
 
   .content p {
